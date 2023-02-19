@@ -1,0 +1,76 @@
+.size {width:400px;
+margin-top: 59px;
+margin-left: 38px}
+
+.none {display:none}
+
+.choose-word {
+width: 200px;
+height: 60px;
+background: #27AE60;
+border-radius: 8px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
+margin-top:100px;
+}
+
+.container-imagens {
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+.a,.b,.c,.d,.e,.f,.g,.h,.i,.j,.k,.l,.m,.n,.o,.p,.q,.r,.s,.t,.u,.v,.w,.x,.y,.z {
+width: 40px;
+height: 40px;
+background: #E1ECF4;
+border: 1px solid #7AA7C7;
+border-radius: 3px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+display:flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: #39739D;
+}
+
+.primeira-metade, .segunda-metade{display:flex;
+flex-direction: row;
+gap: 12px;}
+
+.primeira-metade{
+    margin-bottom:12px;
+}
+
+.container-letras{width:100%;
+display:flex;
+flex-direction: column;
+align-items:center;
+margin-top:70px;
+}
+
+.container-palavras{
+font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 68px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+}
+
+.organizador {display:flex;
+flex-direction:column;
+justify-content: space-between;
+margin-right:53px;
+align-items: center;}
