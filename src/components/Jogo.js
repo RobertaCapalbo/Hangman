@@ -7,7 +7,8 @@ import forca5 from '../assets/forca5.png';
 import forca6 from '../assets/forca6.png';
 
 export default function App() {
-    const palavra = 'roberta'
+    let word = 'arara'
+    const guessedLetters = ['r', 's', 'a']
     return (
     <div className="container-imagens">
       <div>
@@ -22,7 +23,7 @@ export default function App() {
       <div className="organizador">
       <button className="choose-word">Escolher Palavra</button>
       <div className="container-palavras">
-      {palavra}
+      {word.split('').map((letter,index) => (<span style={{borderBottom:'3px solid black'}} key={index}><span style={{visibility:guessedLetters.includes(letter)?'visible':'hidden'}}>{letter}</span></span>))}
       </div>
       </div>
       </div>
