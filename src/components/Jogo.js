@@ -5,25 +5,20 @@ import forca3 from '../assets/forca3.png';
 import forca4 from '../assets/forca4.png';
 import forca5 from '../assets/forca5.png';
 import forca6 from '../assets/forca6.png';
+import React, { useState } from 'react';
 
-export default function App() {
-    let word = 'arara'
-    const guessedLetters = ['r', 's', 'a']
+const bodyParts = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
+
+export default function App({word, guessedLetters, numberOfGuesses}) {
     return (
     <div className="container-imagens">
       <div>
-        <img className="size none" src={forca0} alt='imagem'></img>
-        <img className="size none" src={forca1} alt='imagem'></img>
-        <img className="size none" src={forca2} alt='imagem'></img>
-        <img className="size none" src={forca3} alt='imagem'></img>
-        <img className="size none" src={forca4} alt='imagem'></img>
-        <img className="size none" src={forca5} alt='imagem'></img>
-        <img className="size" src={forca6} alt='imagem'></img>
+      {bodyParts.slice(0, 1).map((imagem, index)=>(<img className="size" src={imagem} alt='imagem' key={index}></img>))}
       </div>
       <div className="organizador">
       <button className="choose-word">Escolher Palavra</button>
       <div className="container-palavras">
-      {word.split('').map((letter,index) => (<span style={{borderBottom:'3px solid black'}} key={index}><span style={{visibility:guessedLetters.includes(letter)?'visible':'hidden'}}>{letter}</span></span>))}
+      {word.split('').map((letter,index) => (<span style={{borderBottom:'3px solid black', width: '50px'}} key={index}><span style={{visibility:guessedLetters.includes(letter)?'visible':'hidden'}}>{letter}</span></span>))}
       </div>
       </div>
       </div>
