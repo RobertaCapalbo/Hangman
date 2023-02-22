@@ -12,7 +12,7 @@ const [guessedLetters, setGuessedLetters] = useState([])
 const incorrectGuesses = guessedLetters.filter((letter) => !wordGuess.includes(letter))
 
 function addGuessedLetters(letter){
- if(guessedLetters.includes(letter)) return
+ if(guessedLetters.includes(letter) || loser || winner) return
 
  setGuessedLetters((guessedLetters) => [...guessedLetters, letter])
 }
@@ -31,10 +31,17 @@ return () => {document.removeEventListener('keypress', handler)
 }
 }, [guessedLetters])
 
+const loser = incorrectGuesses.length >= 6
+const winner = wordGuess.split('').every((letter) => guessedLetters.includes(letter))
+
   return (
     <div>
       <Jogo word={wordGuess} guessedLetters={guessedLetters} numberOfGuesses={incorrectGuesses.length}/>
-      <Letras />
+      <Letras activeLetters={guessedLetters.filter(letter => wordGuess.includes(letter))}
+      inactiveLetters={incorrectGuesses}
+      addGuessedLetters={addGuessedLetters}
+      disabled={loser || winner}
+      />
     </div>
   );
 }
