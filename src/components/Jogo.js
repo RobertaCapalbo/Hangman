@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 
 const bodyParts = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
 
-export default function App({word, guessedLetters, numberOfGuesses}) {
+export default function Jogo({word, guessedLetters, numberOfGuesses, reveal}) {
     return (
     <div className="container-imagens">
       <div>
@@ -18,7 +18,7 @@ export default function App({word, guessedLetters, numberOfGuesses}) {
       <div className="organizador">
       <button className="choose-word">Escolher Palavra</button>
       <div className="container-palavras">
-      {word.split('').map((letter,index) => (<span style={{borderBottom:'3px solid black', width: '50px'}} key={index}><span style={{visibility:guessedLetters.includes(letter)?'visible':'hidden'}}>{letter}</span></span>))}
+      {word.split('').map((letter,index) => (<span style={{borderBottom:'3px solid black', width: '50px'}} key={index}><span style={{visibility:guessedLetters.includes(letter) || reveal?'visible':'hidden'}}>{letter}</span></span>))}
       </div>
       </div>
       </div>
