@@ -40,7 +40,7 @@ export default function Letras({activeLetters, inactiveLetters, addGuessedLetter
         {alfabeto.map((letter)=> {const isActive = !activeLetters.includes(letter)
         const isInactive = !inactiveLetters.includes(letter)
        return(
-        <button class="a" onClick={() => addGuessedLetters(letter)} isActive={isActive && isInactive}>{letter}</button>
+        <button class="a" onClick={() => addGuessedLetters(letter)} isActive={isActive && isInactive} data-test="letter">{letter}</button>
        )
       }
         )}
