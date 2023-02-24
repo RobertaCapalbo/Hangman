@@ -18,24 +18,17 @@ export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal
     setWordGuess(newWord);
   }
 
-    useEffect(() => {
-      if (numberOfGuesses > 0){
-        const hangmanParts = bodyParts.slice(numberOfGuesses - 1, numberOfGuesses)
-        setHangman(hangmanParts)
-       }   
-    }, [numberOfGuesses])
-
     return (
     <div className="container-imagens">
       <div>
-      {hangman.map((imagem, index) => {
+      {bodyParts.slice(numberOfGuesses, numberOfGuesses + 1).map((imagem, index) => {
       return <img className="size" src={imagem} alt='imagem' key={index} data-test="game-image"/>
       })}
       </div>
       <div className="organizador">
       <button className="choose-word" data-test="choose-word" onClick={chooseWord}>Escolher Palavra</button>
       <div className="container-palavras">
-      {wordGuess.split('').map((letter,index) => (<span key={index}><span style={{visibility:guessedLetters.includes(letter) || reveal?'visible':'hidden', visibility: guessedLetters.includes(letter) || reveal ? letter : '_', color: !guessedLetters.includes(letter) && reveal ? 'red' : 'green'}}>{letter}</span></span>))}
+      {wordGuess.split('').map((letter,index) => (<span style={{borderBottom:'3px solid black', width: '50px'}} key={index}><span style={{visibility:guessedLetters.includes(letter) || reveal?'visible':'hidden', color: !guessedLetters.includes(letter) && reveal ? 'red' : 'green'}}>{letter}</span></span>))}
       </div>
       </div>
       </div>
