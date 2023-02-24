@@ -7,7 +7,7 @@ import forca5 from '../assets/forca5.png';
 import forca6 from '../assets/forca6.png';
 import React, { useEffect, useState } from 'react';
 
-export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal, setWordGuess, words}) {
+export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal, setWordGuess, words, imagem, setImagem}) {
 
   const bodyParts = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
 
