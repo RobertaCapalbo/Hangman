@@ -35,7 +35,7 @@ export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal
       <div className="organizador">
       <button className="choose-word" data-test="choose-word" onClick={chooseWord}>Escolher Palavra</button>
       <div className="container-palavras">
-      {wordGuess.split('').map((letter,index) => (<span style={{borderBottom:'3px solid black', width: '50px'}} key={index}><span style={{visibility:guessedLetters.includes(letter) || reveal?'visible':'hidden', color: !guessedLetters.includes(letter) && reveal ? 'red' : 'green'}} data-test="word">{letter}</span></span>))}
+      {wordGuess.split('').map((letter,index) => (<span style={{borderBottom:'3px solid black', width: '50px'}} key={index}><span style={{visibility:guessedLetters.includes(letter) || reveal?'visible':'hidden', color: !guessedLetters.includes(letter) && reveal ? 'red' : 'green'}}>{letter}</span></span>))}
       </div>
       </div>
       </div>
