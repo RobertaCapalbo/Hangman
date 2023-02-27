@@ -18,7 +18,7 @@ const winner = wordGuess.split('').every((letter) => guessedLetters.includes(let
 
   return (
     <div>
-      <Jogo wordGuess={wordGuess} guessedLetters={guessedLetters} numberOfGuesses={incorrectGuesses.length} reveal={loser} setWordGuess={setWordGuess} words={palavras}/>
+      <Jogo wordGuess={wordGuess} guessedLetters={guessedLetters} numberOfGuesses={incorrectGuesses.length} reveal={loser} setWordGuess={setWordGuess} words={palavras} setGuessedLetters={setGuessedLetters} loser={loser} winner={winner}/>
       <Letras activeLetters={guessedLetters.filter(letter => wordGuess.includes(letter))}
       inactiveLetters={incorrectGuesses}
       winner={winner}

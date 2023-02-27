@@ -1,4 +1,4 @@
-const palavras = ['roberta', 'cachorro', 'maquiagem', 'disney', 'harry potter', 'futebol', 'river plate', 'filmes', 'doces', 'viajar', 'viagem', 'dubai', 'estados unidos', 'paris', 'shopping', 'princesas', 'amor', 'praia', 'videogames', 'livros', 'nostalgia', 'natal', 'irmandade', 'amigos', "abacate", "abacaxi", "abelha", "abanador", "antologia", "amor", "aba", "abrigo", "abrir",
+const palavras = ['roberta', 'cachorro', 'maquiagem', 'disney', 'futebol', 'filmes', 'doces', 'viajar', 'viagem', 'dubai', 'paris', 'shopping', 'princesas', 'amor', 'praia', 'videogames', 'livros', 'nostalgia', 'natal', 'irmandade', 'amigos', "abacate", "abacaxi", "abelha", "abanador", "antologia", "amor", "aba", "abrigo", "abrir",
 "banana", "boi", "batata", "bacalhau", "bexiga", "bowl", "batedeira", "bisturi", "barreira", "banco",
 "caixa", "chantilly", "cachorro", "cuidado", "caneta", "carinho", "cabra", "cesto",
 "dados", "dizer", "danone", "dente", "diamante", "diafragma", "detonar", "dia",
@@ -12,7 +12,7 @@ const palavras = ['roberta', 'cachorro', 'maquiagem', 'disney', 'harry potter', 
 "manga", "morango", "mico", "matar", "mingau", "moqueca", "mocassin",
 "nectarina", "nada", "navio", "namorado", "ninja", "natal", "narciso", "narina", "nabo",
 "ovo", "ostra", "obstetra", "orangotango", "olhar", "ortodoxo", "ouro", "ornamento",
-"pato", "polvo", "povoar", "pano", "princesa", "pizza", "patroa",
+"pato", "polvo", "povoar", "pano", "princesa", "pizza", "patroa", "pai",
 "queijo", "quitanda", "quinta", "quantia", "quarentena", "quadrilha", "quaresma", "quartzo", "quebrar",
 "risada", "rio", "remar", "rato", "racional", "rainha", "radioatividade", "raiz", "raiva", "rachadura",
 "salada", "salamandra", "sacola", "siri", "sabre", "sucarose", "sabedoria", "sacerdote",
@@ -20,6 +20,6 @@ const palavras = ['roberta', 'cachorro', 'maquiagem', 'disney', 'harry potter', 
 "uva", "universo", "unanimidade", "ubuntu", "universidade", "urso", "uivar", "unir",
 "vela", "valeta", "vacilo", "valor", "vagem", "vadiagem", "vaca", "valentia", "vidro", "valsa",
 "xadrez", "xilofone", "xarope", "xenofobia", "xereta", "xerife", "xaveco", "xixi", "xale",
-"zebra", "zagueiro", "zero", "zoeira", "zepelim", "zinco", "zumbido"];
+"zebra", "zagueiro", "zero", "zoeira", "zepelim", "zinco", "zumbido", "loja", "canino", "aranha", "riqueza", "dinheiro", "faringe", "laringe", "comida", "perna", "ombro", "cabelo", "continente", "marinheiro", "concurso", "emprego", "caridade", "globo", "desnatado", "filantropia", "medicina", "escrever", "esporte", "conto", "escritor", "melodia", "berinjela", "honesto", "chefe", "brigadeiro", "beliche", "americano", "copo", "corpo", "marrento", "vergonha", "hepatite", "febre", "corvo", "balada", "batata", "paz", "vale", "mole", "colhe", "colheita", "flor", "floricultura", "passeio", "voltar", "compulsividade", "cenoura", "povo", "pouco", "louco", "malvado", "risada", "ter", "ver", "olho", "cortina", "chato"];
 
 export default palavras

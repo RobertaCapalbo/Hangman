@@ -7,15 +7,14 @@ import forca5 from '../assets/forca5.png';
 import forca6 from '../assets/forca6.png';
 import React, { useEffect, useState } from 'react';
 
-export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal, setWordGuess, words, imagem, setImagem}) {
+export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal, setWordGuess, words, setGuessedLetters, loser, winner}) {
 
   const bodyParts = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
-
-  const [hangman, setHangman] = useState([forca0])
 
   function chooseWord(){
     const newWord = words[Math.floor(Math.random()*words.length)];
     setWordGuess(newWord);
+    setGuessedLetters([])
   }
 
     return (
@@ -33,7 +32,7 @@ export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal
               key={index}>
               <span style={{
                 width: '50px',
-                color: !guessedLetters.includes(letter) && reveal ? 'red' : 'green',
+                color: loser ? 'red' : winner ? 'green' : 'black',
               }}>
                 {guessedLetters.includes(letter) || reveal ? letter : <span style={{color: 'black'}}>{"_"}</span>}
               </span>
