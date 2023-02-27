@@ -28,7 +28,7 @@ export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal
       <button className="choose-word" data-test="choose-word" onClick={chooseWord}>Escolher Palavra</button>
       <div className="container-palavras">
           {wordGuess.split('').map((letter, index) => (
-            <span
+            <span data-test="word"
               key={index}>
               <span style={{
                 width: '50px',
