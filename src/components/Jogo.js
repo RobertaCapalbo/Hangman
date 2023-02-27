@@ -5,9 +5,9 @@ import forca3 from '../assets/forca3.png';
 import forca4 from '../assets/forca4.png';
 import forca5 from '../assets/forca5.png';
 import forca6 from '../assets/forca6.png';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal, setWordGuess, words, setGuessedLetters, loser, winner}) {
+export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal, setWordGuess, words, setGuessedLetters, loser, winner, setIsGameStarted, IsGameStarted}) {
 
   const bodyParts = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
 
@@ -15,15 +15,18 @@ export default function Jogo({wordGuess, guessedLetters, numberOfGuesses, reveal
     const newWord = words[Math.floor(Math.random()*words.length)];
     setWordGuess(newWord);
     setGuessedLetters([])
+    setIsGameStarted(true);
   }
 
     return (
     <div className="container-imagens">
       <div>
-      {bodyParts.slice(numberOfGuesses, numberOfGuesses + 1).map((imagem, index) => {
-      return <img className="size" src={imagem} alt='imagem' key={index} data-test="game-image"/>
-      })}
-      </div>
+          {!setIsGameStarted ? (<img className="size" src={bodyParts[0]} alt='imagem' data-test='game-image'></img>) : (bodyParts.slice(numberOfGuesses, numberOfGuesses + 1).map((imagem, index) => {
+          return (<img className="size" src={imagem} alt='imagem' key={index} data-test="game-image"/>
+          );
+        })
+      )}
+    </div> 
       <div className="organizador">
       <button className="choose-word" data-test="choose-word" onClick={chooseWord}>Escolher Palavra</button>
       <div className="container-palavras">
