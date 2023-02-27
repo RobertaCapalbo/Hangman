@@ -19,9 +19,9 @@ margin-top:100px;
 }
 
 .container-imagens {
-    display:flex;
-    justify-content: space-between;
-    width:100%;
+display:flex;
+justify-content: space-between;
+width:100%;
 }
 
 .a{
