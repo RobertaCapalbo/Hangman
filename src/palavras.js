@@ -1,5 +1,5 @@
 const palavras = ['roberta', 'cachorro', 'maquiagem', 'disney', 'futebol', 'filmes', 'doces', 'viajar', 'viagem', 'dubai', 'paris', 'shopping', 'princesas', 'amor', 'praia', 'videogames', 'livros', 'nostalgia', 'natal', 'irmandade', 'amigos', "abacate", "abacaxi", "abelha", "abanador", "antologia", "amor", "aba", "abrigo", "abrir",
-"banana", "boi", "batata", "bacalhau", "bexiga", "bowl", "batedeira", "bisturi", "barreira", "banco",
+"banana", "boi", "batata", "bacalhau", "bexiga", "batedeira", "bisturi", "barreira", "banco",
 "caixa", "chantilly", "cachorro", "cuidado", "caneta", "carinho", "cabra", "cesto",
 "dados", "dizer", "danone", "dente", "diamante", "diafragma", "detonar", "dia",
 "elefante", "esmeralda", "esfinge", "esfera", "encontro", "ema", "escola", "economia",
